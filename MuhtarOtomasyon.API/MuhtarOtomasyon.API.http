@@ -1,0 +1,6 @@
+@MuhtarOtomasyon.API_HostAddress = http://localhost:5227
+
+GET {{MuhtarOtomasyon.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
