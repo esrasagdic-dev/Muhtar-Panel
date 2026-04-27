@@ -1,0 +1,141 @@
+/* --- MUHTAR İŞLEM ÖZEL STİLLERİ --- */
+
+.islem-sayfasi-konteynir {
+    padding: 10px;
+}
+
+/* Kart Tasarımları */
+.islem-kayit-kart,
+.islem-tablo-kart {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0f2f5;
+}
+
+.kart-baslik h5 {
+    color: #1a202c;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* Form Elemanları */
+.islem-form-grup {
+    margin-bottom: 20px;
+}
+
+.islem-form-grup label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+}
+
+.custom-input {
+    border: 2px solid #edf2f7;
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+/* Kaydet Butonu */
+.btn-kaydet {
+    background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+    color: white;
+    font-weight: 600;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.btn-kaydet:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(49, 130, 206, 0.4);
+    color: white;
+}
+
+/* Tablo Modernizasyonu */
+.custom-modern-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.custom-modern-table thead th {
+    background-color: transparent;
+    border: none;
+    color: #718096;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.custom-modern-table tbody tr {
+    background-color: #f8fafc;
+    transition: transform 0.2s ease;
+}
+
+.custom-modern-table tbody tr:hover {
+    transform: scale(1.01);
+    background-color: #f1f5f9;
+}
+
+.custom-modern-table td {
+    border: none;
+    padding: 16px !important;
+    vertical-align: middle;
+}
+
+.custom-modern-table td:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.custom-modern-table td:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* Badge ve Hücre Detayları */
+.islem-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.islem-badge.evrak {
+    background: #ebf8ff;
+    color: #2b6cb0;
+}
+
+.islem-badge.yardim {
+    background: #fff5f5;
+    color: #c53030;
+}
+
+.ucret-hucre {
+    font-weight: 700;
+    color: #2f855a;
+}
+
+/* Yazdır Butonu */
+.btn-tablo-yazdir {
+    background-color: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-tablo-yazdir:hover {
+    background-color: #1a202c;
+    color: white;
+}

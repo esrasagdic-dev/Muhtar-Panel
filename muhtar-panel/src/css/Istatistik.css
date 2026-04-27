@@ -1,0 +1,103 @@
+/* Genel Dashboard Konteyner Animasyonu */
+.container-fluid {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kartların Genel Yapısı */
+.card {
+    border: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Kartların Üzerine Gelince Hafif Yükselme */
+.shadow-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Kartların Solundaki Renkli Şeritler */
+.border-5 {
+    border-left-width: 6px !important;
+}
+
+/* Canlı Harita (Iframe) Ayarları */
+.map-iframe {
+    display: block;
+    filter: contrast(1.1) brightness(0.95);
+    transition: filter 0.4s ease;
+}
+
+.map-iframe:hover {
+    filter: contrast(1) brightness(1);
+}
+
+/* Harita Kartının Alt Köşelerini Yuvarlama */
+.card-body.p-0 {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+}
+
+/* İkon Kutucukları Efektleri */
+.bg-opacity-10 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+}
+
+/* Sokak Listesi Tasarımı */
+.bg-light.rounded-3 {
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+}
+
+.bg-light.rounded-3:hover {
+    background-color: #e9ecef !important;
+    transform: scale(1.02);
+}
+
+/* Badge (Rozet) Gölgeleri */
+.badge.shadow-sm {
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+}
+
+/* Sayfa Scroll Bar Tasarımı (Babanın Gözüne Şık Görünür) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .map-iframe {
+        height: 350px !important;
+    }
+}

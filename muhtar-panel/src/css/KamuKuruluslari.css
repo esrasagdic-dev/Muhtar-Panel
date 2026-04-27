@@ -1,0 +1,137 @@
+/* GENEL SAYFA YAPISI */
+.dilekce-ana-container {
+    animation: fadeIn 0.5s ease-in-out;
+    padding-bottom: 50px;
+}
+
+/* SOL PANEL (KONTROL KARTI) */
+.card {
+    border-radius: 15px;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.form-select,
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* A4 KAĞIT ÖNİZLEME (EKRAN GÖRÜNÜMÜ) */
+.dilekce-paper {
+    width: 210mm;
+    /* Standart A4 Genişliği */
+    min-height: 297mm;
+    padding: 25mm 25mm 20mm 30mm;
+    /* Üst, Sağ, Alt, Sol (Resmi Marjlar) */
+    margin: 0 auto;
+    background: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    /* Resmi Yazışma Fontu */
+    color: #000;
+    line-height: 1.6;
+    font-size: 12pt;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* DİLEKÇE BÖLÜMLERİ */
+.dilekce-tc {
+    font-size: 14pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.dilekce-header {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.dilekce-address {
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+
+.dilekce-subject {
+    margin-bottom: 30px;
+}
+
+.dilekce-body {
+    text-align: justify;
+    /* İki yana yasla */
+    text-indent: 1.5cm;
+    /* Paragraf başı girintisi */
+    flex-grow: 1;
+    /* İçerik az olsa bile imza alanını aşağıda tutar */
+}
+
+.dilekce-footer {
+    margin-top: 40px;
+    line-height: 1.3;
+}
+
+/* YAZDIRMA (PRINT) KURALLARI - KRİTİK KISIM */
+@media print {
+
+    /* Ekranda görünen her şeyi gizle */
+    .no-print,
+    .sidebar,
+    .sidebar-logo,
+    .navbar,
+    .btn,
+    .app-container>.sidebar {
+        display: none !important;
+    }
+
+    /* Ana taşıyıcıyı ve arka planı temizle */
+    body {
+        background-color: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Kağıdı tam ekran yap ve gölgeleri kaldır */
+    .dilekce-paper {
+        margin: 0 !important;
+        padding: 20mm !important;
+        /* Yazıcı için güvenli marj */
+        width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Sayfa sonu ayarları */
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
+
+/* ANİMASYON */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

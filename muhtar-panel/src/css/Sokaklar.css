@@ -1,0 +1,87 @@
+/* Sokaklar Paneli Genel Stil */
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Kartların üzerine gelince hafif yukarı kalkma efekti */
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    cursor: default;
+}
+
+/* Modal Arka Plan Karartma */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Arka planı hafif karartır */
+    backdrop-filter: blur(4px);
+    /* Arka planı bulanıklaştırarak modern bir hava katar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+/* Modal Kutusu */
+.custom-modal {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 1.25rem;
+    /* rounded-4 */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: modalScaleIn 0.3s ease-out;
+}
+
+/* Modalın açılma animasyonu */
+@keyframes modalScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Input ve Select odaklanma efekti */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* Silme butonu hover efekti */
+.btn-link.text-danger:hover {
+    color: #dc3545 !important;
+    background-color: #f8d7da;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+/* Arama çubuğu ikonu hizalaması */
+.input-group-text {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-left: 1.2rem;
+}
+
+.form-control.border-start-0 {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Kart içindeki ikon kutusu */
+.bg-primary.bg-opacity-10 {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

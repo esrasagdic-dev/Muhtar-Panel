@@ -1,0 +1,97 @@
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar-logo span {
+    color: #3b82f6;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: #64748b;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+    background: #f1f5f9;
+    color: #3b82f6;
+}
+
+.nav-item.active {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.sidebar {
+    width: 260px;
+    /* Genişliği sabitleyelim */
+    min-width: 260px;
+    height: 100vh;
+    position: sticky;
+    /* Sayfa kaysa da menü sabit kalsın */
+    top: 0;
+    left: 0;
+}
+
+.sidebar {
+    /* Mevcut yükseklik ayarın kalsın ama şunları ekle/güncelle: */
+    height: 100vh;
+    /* Ekranın tam boyu kadar olsun */
+    position: fixed;
+    /* Sayfa kayınca sidebar sabit kalsın */
+    left: 0;
+    top: 0;
+
+    /* İŞTE ASIL ÇÖZÜM BURASI: */
+    overflow-y: auto;
+    /* İçerik sığmazsa dikeyde kaydırma çubuğu çıksın */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Kaydırma çubuğunun (scrollbar) çok kaba görünmemesi için şu şık dokunuşu da yap: */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+    /* İnce bir bar */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Hafif şeffaf beyaz */
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-nav {
+    flex: 1;
+    /* Menü elemanlarının alanı kaplamasını sağla */
+    padding-bottom: 20px;
+    /* En alttaki eleman yapışmasın, biraz boşluk kalsın */
+}

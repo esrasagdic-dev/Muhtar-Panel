@@ -1,0 +1,71 @@
+/* ENGELLİ TAKİP PANELİ ÖZEL STİLLERİ */
+
+.engelli-container {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Başlık */
+.text-info.border-bottom {
+    border-bottom: 3px solid #0dcaf0 !important;
+    color: #0891b2 !important;
+}
+
+/* Tablo Tasarımı */
+.engelli-table-card {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+}
+
+.table thead {
+    background-color: #0dcaf0;
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f0fdff !important;
+}
+
+/* Engel Oranı Rozetleri */
+.badge.bg-danger {
+    background-color: #ef4444 !important;
+    /* %70 üzeri için */
+    animation: pulse 2s infinite;
+}
+
+.badge.bg-warning {
+    background-color: #f59e0b !important;
+    /* %40-70 arası için */
+    color: #fff !important;
+}
+
+/* Form Tasarımı */
+.engelli-form-card {
+    border-top: 4px solid #0dcaf0 !important;
+    position: sticky;
+    top: 20px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,144 @@
+/* GENEL SAYFA YAPISI */
+.dilekce-ana-container {
+    animation: fadeIn 0.5s ease-in-out;
+    padding-bottom: 50px;
+}
+
+/* SOL PANEL (KONTROL KARTI) */
+.card {
+    border-radius: 15px;
+    border: 1px solid #e0e0e0 !important;
+    background-color: #fdfdfd;
+}
+
+.form-select,
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* A4 KAĞIT ÖNİZLEME (EKRAN GÖRÜNÜMÜ) */
+.dilekce-paper {
+    width: 210mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    /* İkinci sayfaya taşmayı ekranda da engellemek için */
+    padding: 20mm 20mm 20mm 25mm;
+    /* Marjlar biraz daraltıldı ki sığması kolaylaşsın */
+    margin: 0 auto;
+    background: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    line-height: 1.5;
+    /* Biraz daraltıldı */
+    font-size: 12pt;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Taşmayı engeller */
+}
+
+/* DİLEKÇE BÖLÜMLERİ */
+.dilekce-tc {
+    font-size: 14pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.dilekce-header {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.dilekce-address {
+    margin-bottom: 35px;
+    line-height: 1.2;
+}
+
+.dilekce-subject {
+    margin-bottom: 25px;
+}
+
+.dilekce-body {
+    text-align: justify;
+    text-indent: 1.5cm;
+    flex-grow: 1;
+    /* Metin kutusu büyüdükçe imza alanını aşağı iter ama sayfa dışına itmez */
+}
+
+.dilekce-footer {
+    margin-top: 20px;
+    line-height: 1.3;
+    page-break-inside: avoid;
+    /* İmza alanının bölünmesini engeller */
+}
+
+/* YAZDIRMA (PRINT) KURALLARI */
+@media print {
+
+    /* Sayfadaki her şeyi gizle, sadece dilekçeyi göster */
+    body * {
+        visibility: hidden !important;
+    }
+
+    #printableArea,
+    #printableArea * {
+        visibility: visible !important;
+    }
+
+    #printableArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .dilekce-paper {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: auto !important;
+        max-height: 297mm !important;
+        padding: 15mm !important;
+        /* Yazıcı marjı */
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+        /* Tarayıcı marjlarını sıfırla, CSS padding kullansın */
+    }
+}
+
+/* ANİMASYON */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
