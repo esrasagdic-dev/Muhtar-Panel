@@ -1,6 +1,5 @@
 # 🏛️ Muhtar Amca - Mahalle Yönetim Otomasyonu
-
-Selçuk Üniversitesi Bilgisayar Mühendisliği mezuniyet projesi kapsamında geliştirilmiş, mahalle yönetim süreçlerini dijitalleştiren tam kapsamlı (Full-Stack) bir otomasyon sistemidir.
+Mahalle yönetim süreçlerini dijitalleştiren tam kapsamlı (Full-Stack) bir otomasyon sistemidir.
 
 ## 🚀 Teknolojiler
 Bu proje modern web teknolojileri ve profesyonel yazılım mimarisi kullanılarak geliştirilmiştir:
